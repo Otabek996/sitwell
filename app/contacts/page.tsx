@@ -1,7 +1,12 @@
+import Navbar from '@/components/Navbar';
+
 export default function ContactsPage() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Contacts</h1>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-1 flex flex-col items-center justify-center p-6 text-center">
+        <h1 className="text-4xl font-bold">Contacts</h1>
+      </main>
     </div>
   );
 }
