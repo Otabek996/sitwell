@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #140a1e;
+  --foreground: #ffffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+  background: radial-gradient(circle at 60% 30%, #4c146e 0%, #140a1e 60%, #0a040f 100%) !important;
+  background-attachment: fixed !important;
+  color: #ffffff !important;
+  min-height: 100vh;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: #3a164c;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific inputs */
+.input-field {
+  background: #4a215e;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus-within {
+  border-color: #991cf8;
+  background: #522668;
+}
+
+.input-field input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+}
+
+.input-field input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.primary-btn {
+  background: #991cf8;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background: #af40ff;
 }
