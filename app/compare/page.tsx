@@ -1,7 +1,12 @@
+import Navbar from '@/components/Navbar';
+
 export default function ComparePage() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Compare</h1>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-1 flex flex-col items-center justify-center p-6 text-center">
+        <h1 className="text-4xl font-bold">Compare</h1>
+      </main>
     </div>
   );
 }
